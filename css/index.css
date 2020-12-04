@@ -1,6 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+
+/*header section*/
+
 body {
     margin: 0;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
 }
 
@@ -34,6 +38,7 @@ html {
     text-decoration: none;
     color: black;
     cursor: pointer;
+    color: #009688;
 }
 
 #logo {
@@ -53,6 +58,10 @@ html {
     margin-left: 32px;
     text-transform: uppercase;
     font-weight: 600;
+}
+
+#left-menu>a:hover {
+    color: #009688;
 }
 
 #search-wrapper {
@@ -78,6 +87,7 @@ html {
     padding: 10px 24px 8px 48px;
     color: black;
     outline: none;
+    font-size: 17px;
 }
 
 #right-menu {
@@ -122,6 +132,7 @@ html {
 
 #user_avatar {
     font-size: 22px;
+    color: #009688;
 }
 
 #edyoda-projects-logo {
@@ -129,6 +140,79 @@ html {
     position: fixed;
     bottom: 50px;
     right: 50px;
+}
+
+
+/*index page*/
+
+#carousel {
+    overflow: hidden;
+    margin-top: 75.5px;
+}
+
+.section-heading {
+    margin-top: 100px;
+    margin-left: 70px;
+    padding: 0 4%;
+    color: rgb(27, 25, 25);
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0 4%;
+}
+
+.card {
+    width: 15%;
+    min-width: 200px;
+    height: auto;
+    margin: 30px 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.card a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.card:hover {
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.7);
+}
+
+.img {
+    width: 100%;
+}
+
+.card .details {
+    padding-left: 10px;
+    margin: 10px auto;
+}
+
+.name {
+    text-align: left;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    color: rgb(27, 25, 25);
+}
+
+.brand {
+    margin-top: 10px;
+    text-align: left;
+    font-size: 12px;
+    color: rgb(110, 110, 110);
+}
+
+.price {
+    margin-top: 10px;
+    text-align: left;
+    font-size: 15px;
+    letter-spacing: 2px;
+    color: #009688;
 }
 
 
@@ -218,7 +302,6 @@ html {
     cursor: pointer;
     padding: 4px;
     border-radius: 6px;
-    transition: all 1s;
 }
 
 .active {
@@ -244,7 +327,7 @@ html {
 }
 
 
-/*============== CheckOut Page Style Start ==================================*/
+/* CheckOut Page */
 
 #cart {
     margin: 4% 6%;
@@ -381,14 +464,13 @@ footer {
     display: flex;
     justify-content: center;
     box-sizing: border-box;
-    padding: 4% 8%;
+    padding: 2% 4%;
+    position: relative;
 }
 
 footer>div {
     padding-left: 60px;
     padding-right: 60px;
-    /* display: flex;
-flex-direction: column; */
 }
 
 footer>div:first-of-type {
@@ -408,84 +490,30 @@ footer>div:first-of-type {
     text-decoration: none;
     color: white;
     display: block;
-    margin-top: 12px;
+    margin-top: 5px;
     letter-spacing: 1px;
     text-transform: uppercase;
     font-size: 14px;
     opacity: 0.8;
+    transition: all 1s;
 }
 
-#carousel {
-    overflow: hidden;
-    margin-top: 84px;
+.footer-link:hover {
+    color: #08aa9a;
 }
 
-.section-heading {
-    margin-top: 100px;
-    margin-left: 70px;
-    padding: 0 4%;
-    color: rgb(27, 25, 25);
-}
-
-.product-grid {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-    padding: 0 4%;
-}
-
-.card {
-    width: 15%;
-    min-width: 200px;
-    height: auto;
-    margin: 30px 10px;
-    background-color: #fff;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-}
-
-.card a {
+.topbtn {
     text-decoration: none;
-    color: #fff;
+    color: white;
+    margin-top: 50px;
 }
 
-.card:hover {
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+.topbtn i {
+    font-size: 20px;
 }
 
-.img {
-    width: 100%;
-}
 
-.card .details {
-    padding-left: 10px;
-    margin: 10px auto;
-}
-
-.name {
-    text-align: left;
-    font-size: 16px;
-    font-weight: 400;
-    letter-spacing: 0.5px;
-    color: rgb(27, 25, 25);
-}
-
-.brand {
-    margin-top: 10px;
-    text-align: left;
-    font-size: 12px;
-    color: rgb(110, 110, 110);
-}
-
-.price {
-    margin-top: 10px;
-    text-align: left;
-    font-size: 15px;
-    letter-spacing: 2px;
-    color: #009688;
-}
-
-@media (max-width:768px) {
+/* @media (max-width:768px) {
     .card {
         width: calc(50% - 22px);
     }
@@ -494,5 +522,79 @@ footer>div:first-of-type {
 @media (max-width:400px) {
     .card {
         width: calc(100% - 22px);
+    }
+} */
+
+@media (max-width: 1024px) {
+    .item {
+        width: 450px;
+    }
+    .total-amount {
+        width: 350px;
+        margin-top: 50px;
+        margin-left: 50px;
+    }
+}
+
+@media (max-width: 910px) {
+    .card {
+        width: 33%;
+    }
+    .left-side {
+        width: 100%;
+        margin-top: 60px;
+    }
+    .right-side {
+        width: 100%;
+        margin-top: 60px;
+    }
+    .item {
+        width: 600px;
+    }
+    .total-amount {
+        width: 600px;
+        margin: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 50%;
+    }
+    .item {
+        width: 350px;
+    }
+    .item .detail h1 {
+        font-size: 20px;
+    }
+    .item .detail p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 400px) {
+    .card {
+        width: 90%;
+    }
+    .item {
+        width: 325px;
+    }
+    .item .detail h1 {
+        font-size: 18px;
+    }
+    .total-amount {
+        width: 325px;
+    }
+}
+
+@media (max-width: 320px) {
+    .item {
+        width: 275px;
+    }
+    .item .detail h1 {
+        font-size: 16px;
+    }
+    .total-amount {
+        width: 275px;
     }
 }
