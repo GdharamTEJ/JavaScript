@@ -38,7 +38,7 @@ html {
     text-decoration: none;
     color: black;
     cursor: pointer;
-    color: #009688;
+    color: red;
 }
 
 #logo {
@@ -455,6 +455,12 @@ html {
     margin-top: 10px;
 }
 
+#humburg-icon {
+    font-size: 25px;
+    color: black;
+    display: none;
+}
+
 
 /*footer*/
 
@@ -512,89 +518,62 @@ footer>div:first-of-type {
     font-size: 20px;
 }
 
-
-/* @media (max-width:768px) {
+@media (max-width: 991px) {
     .card {
-        width: calc(50% - 22px);
+        width: calc(25% - 22px);
     }
-}
-
-@media (max-width:400px) {
-    .card {
-        width: calc(100% - 22px);
+    .product-grid {
+        margin: 0 auto;
     }
-} */
-
-@media (max-width: 1024px) {
-    .item {
-        width: 450px;
+    #search-wrapper {
+        display: none;
     }
-    .total-amount {
-        width: 350px;
-        margin-top: 50px;
-        margin-left: 50px;
-    }
-}
-
-@media (max-width: 910px) {
-    .card {
-        width: 33%;
-    }
-    .left-side {
-        width: 100%;
-        margin-top: 60px;
-    }
-    .right-side {
-        width: 100%;
-        margin-top: 60px;
-    }
-    .item {
-        width: 600px;
-    }
-    .total-amount {
-        width: 600px;
-        margin: 0;
+    #carousel {
+        display: none;
     }
 }
 
 @media (max-width: 768px) {
     .card {
-        width: 50%;
+        width: calc(33% - 22px);
     }
-    .item {
-        width: 350px;
+    .product-grid {
+        margin: 0 auto;
     }
-    .item .detail h1 {
-        font-size: 20px;
+    .menu {
+        display: none;
     }
-    .item .detail p {
-        font-size: 14px;
+    #humburg-icon {
+        display: block;
+    }
+    /* #user_avatar {
+        display: none;
+    } */
+    #topbar {
+        display: flex;
+        justify-content: space-between;
+    }
+    .product-card {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 576px) {
+    .card {
+        width: calc(50% - 22px);
+    }
+    .product-grid {
+        margin: 0 auto;
     }
 }
 
 @media (max-width: 400px) {
     .card {
-        width: 90%;
+        width: 100%
     }
-    .item {
-        width: 325px;
-    }
-    .item .detail h1 {
-        font-size: 18px;
-    }
-    .total-amount {
-        width: 325px;
-    }
-}
-
-@media (max-width: 320px) {
-    .item {
-        width: 275px;
-    }
-    .item .detail h1 {
-        font-size: 16px;
-    }
-    .total-amount {
-        width: 275px;
+    .product-grid {
+        margin: 0 auto;
     }
 }

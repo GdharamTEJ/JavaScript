@@ -61,8 +61,14 @@ numberOfItem.innerHTML = counter;
 console.log('counter ' + counter);
 
 var placeOrder = document.getElementById("place-order");
+var placeOrderLink = document.getElementById("place-order-link");
 
 placeOrder.addEventListener("click", function() {
+    $.post('https://5d76bf96515d1a0014085cf9.mockapi.io/order', myLocalStorageData, function() {
+            alert('order sucessfull');
+        })
+        // setTimeout(function() { alert("Hello"); }, 3000);
+
     myLocalStorageData = window.localStorage.removeItem("product-list");
     cartC = window.localStorage.setItem("cart-count", "0");
     var cost = 0;
@@ -75,5 +81,6 @@ placeOrder.addEventListener("click", function() {
     totalAmount.innerHTML = cost;
     numberOfItem.innerHTML = counter;
     console.log('counter new ' + counter);
+    location.href = "./orderconfirm.html";
 
 });
