@@ -1,5 +1,6 @@
 /*Creating index page*/
 
+
 var clothingCard = document.getElementById('clothing-card');
 var isAccessory = document.getElementById('accessories-card');
 
